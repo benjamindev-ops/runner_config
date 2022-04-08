@@ -1,0 +1,13 @@
+name: BuildMachine-steps
+on:
+  push:
+    branches: [ main ]
+jobs:
+  Continousdelivery:
+    name: Continousdelivery
+    runs-on: self-hosted
+    steps:
+          
+## run ansible
+      - name: run ansible
+        run: ansible all -m win_ping -v
